@@ -33,7 +33,7 @@ class Summary extends Component {
       return dObj;
     }, { ...bar });
 
-    const ordenado = data.sort((first, second) => second.total - first.total);
+    const ordenado = data.sort((first, second) => second.calificacion - first.calificacion);
     const promedio = ordenado.reduce((acc, x) => acc + x.calificacion, 0) / ordenado.length;
 
     let [mejor] = ordenado;
